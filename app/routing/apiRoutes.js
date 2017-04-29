@@ -1,3 +1,5 @@
-/**
- * Created by Ev on 4/27/17.
- */
+
+//Setting api route
+app.get("/api/:characters?", function(req, res) {
+
+}
