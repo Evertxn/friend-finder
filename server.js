@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
 
-/ Sets up the Express App
+// Sets up the Express App
 // =============================================================
 var app = express();
 var PORT = 3000;
@@ -19,3 +19,9 @@ app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
 });
 
+
+// Import routes.
+require('./app/routing/apiRoutes')(app);
+require('./app/routing/htmlRoutes')(app);
+
+app.listen(PORT);
