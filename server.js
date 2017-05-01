@@ -21,7 +21,7 @@ app.listen(PORT, function() {
 
 
 // Import routes.
-require('./app/routing/apiRoutes')(app);
-require('./app/routing/htmlRoutes')(app);
+require(path.join(__dirname, '/app/routing/apiRoutes'))(app);
+require(path.join(__dirname, '/app/routing/htmlRoutes'))(app);
 
-app.listen(PORT);
+
